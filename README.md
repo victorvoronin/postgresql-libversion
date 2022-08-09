@@ -1,5 +1,6 @@
 # postgresql-libversion
 
+
 ![CI](https://github.com/repology/postgresql-libversion/workflows/CI/badge.svg)
 
 PostgreSQL extension with support for version string comparison through [libversion](https://github.com/repology/libversion).
