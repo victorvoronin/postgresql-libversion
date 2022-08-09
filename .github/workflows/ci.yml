@@ -9,9 +9,9 @@ jobs:
           #- { libversion: master, postgresql: 11, cc: gcc }
           # libversion versions
           #- { libversion: 3.0.1, postgresql: 11, cc: gcc }
-          - { libversion: 3.0.0, postgresql: 11, cc: gcc }
+          #- { libversion: 3.0.0, postgresql: 11, cc: gcc }
           # compilers
-          - { libversion: master, postgresql: 11, cc: clang }
+          #- { libversion: master, postgresql: 11, cc: clang }
           # postgresql versions
           #- { libversion: master, postgresql: 9.6, cc: gcc }
           #- { libversion: master, postgresql: 10, cc: gcc }
