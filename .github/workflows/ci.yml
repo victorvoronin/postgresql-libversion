@@ -6,17 +6,18 @@ jobs:
     strategy:
       matrix:
         include:
-          - { libversion: master, postgresql: 11, cc: gcc }
+          #- { libversion: master, postgresql: 11, cc: gcc }
           # libversion versions
-          - { libversion: 3.0.1, postgresql: 11, cc: gcc }
+          #- { libversion: 3.0.1, postgresql: 11, cc: gcc }
           - { libversion: 3.0.0, postgresql: 11, cc: gcc }
           # compilers
           - { libversion: master, postgresql: 11, cc: clang }
           # postgresql versions
-          - { libversion: master, postgresql: 9.6, cc: gcc }
-          - { libversion: master, postgresql: 10, cc: gcc }
-          - { libversion: master, postgresql: 12, cc: gcc }
+          #- { libversion: master, postgresql: 9.6, cc: gcc }
+          #- { libversion: master, postgresql: 10, cc: gcc }
+          #- { libversion: master, postgresql: 12, cc: gcc }
           - { libversion: master, postgresql: 13, cc: gcc }
+          - { libversion: master, postgresql: 14, cc: gcc }
     steps:
       - uses: actions/checkout@v2
       - name: Install postgresql
