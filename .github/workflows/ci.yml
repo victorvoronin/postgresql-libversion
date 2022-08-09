@@ -17,7 +17,7 @@ jobs:
           #- { libversion: master, postgresql: 10, cc: gcc }
           #- { libversion: master, postgresql: 12, cc: gcc }
           - { libversion: master, postgresql: 13, cc: gcc }
-          - { libversion: master, postgresql: 14, cc: gcc }
+          #- { libversion: master, postgresql: 14, cc: gcc }
     steps:
       - uses: actions/checkout@v2
       - name: Install postgresql
