@@ -15,17 +15,17 @@ jobs:
           # postgresql versions
           #- { libversion: master, postgresql: 9.6, cc: gcc }
           #- { libversion: master, postgresql: 10, cc: gcc }
-          #- { libversion: master, postgresql: 12, cc: gcc }
-          - { libversion: master, postgresql: 13, cc: gcc }
+          - { libversion: master, postgresql: 12, cc: gcc }
+          #- { libversion: master, postgresql: 13, cc: gcc }
           #- { libversion: master, postgresql: 14, cc: gcc }
     steps:
       - uses: actions/checkout@v2
       - name: Install postgresql
         run: |
           sudo apt-get purge 'postgresql*' >/dev/null 2>&1 || true
-          sudo echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-          wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-          sudo apt-get update
+          #sudo echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+          #wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+          #sudo apt-get update
           sudo apt-get install postgresql-${{ matrix.postgresql }} postgresql-client-${{ matrix.postgresql }} postgresql-server-dev-${{ matrix.postgresql }}
           sudo pg_ctlcluster ${{ matrix.postgresql }} main restart
           sudo -u postgres createuser -s "$USER" || true
